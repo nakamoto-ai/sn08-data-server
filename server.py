@@ -22,4 +22,4 @@ def download_file():
     return send_from_directory(config.data_file_path, config.data_file_name, as_attachment=True)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8888)
+    app.run(debug=True, port=8888, host='0.0.0.0')
