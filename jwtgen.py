@@ -1,7 +1,9 @@
 import argparse
 import jwt
 from datetime import datetime, timedelta
-import config
+from config import Config
+
+config = Config()
 
 def generate_jwt(key: str, dur: float):
     payload = {
@@ -18,4 +20,4 @@ if __name__ == '__main__':
     parser.add_argument('--dur', type=float, default=30, help='Duration key is valid')
     args = parser.parse_args()
 
-    generate_jwt(key=config.SECRET_KEY, dur=args.dur)
+    generate_jwt(key=config.secret_key, dur=args.dur)
