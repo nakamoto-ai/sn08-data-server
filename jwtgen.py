@@ -7,8 +7,8 @@ config = Config()
 
 def generate_jwt(key: str, dur: float):
     payload = {
-        'exp': datetime.utcnow() + timedelta(days=dur),  # Token expires in 1 day
-        'iat': datetime.utcnow(),  # Issued at time
+        'exp': datetime.utcnow() + timedelta(days=dur), 
+        'iat': datetime.utcnow(),  
     }
 
     # Encode the payload to create the JWT
